@@ -14,6 +14,7 @@
 @property NSDictionary *eventsDictionary;
 @property NSArray *eventsArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextField *searchText;
 
 @end
 
@@ -60,6 +61,27 @@
 
 }
 
+- (IBAction)onSearchButtonPressed:(id)sender
+{
+    NSString *textFromSearch = self.searchText.text;
+    NSString *prefix = @"https://api.meetup.com/2/open_events.json?zip=60604&text=";
+    prefix = [prefix stringByAppendingString:textFromSearch];
+    prefix = [prefix stringByAppendingString:@"&time=,1w&key=351e376f5a6047102e70752b32c373b"];
+
+    NSLog(@"%@", prefix);
+
+    NSURL *url = [NSURL URLWithString:prefix];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+     {
+         self.eventsDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&connectionError];
+         self.eventsArray = [self.eventsDictionary objectForKey:@"results"];
+         [self.tableView reloadData];
+         [self.searchText resignFirstResponder];
+     }];
+
+}
 
 
 

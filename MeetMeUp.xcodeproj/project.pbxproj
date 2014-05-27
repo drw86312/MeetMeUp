@@ -21,6 +21,8 @@
 		0E7CBDB219350C57008D16C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7CBD9419350C57008D16C4 /* UIKit.framework */; };
 		0E7CBDBA19350C57008D16C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E7CBDB819350C57008D16C4 /* InfoPlist.strings */; };
 		0E7CBDBC19350C57008D16C4 /* MeetMeUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7CBDBB19350C57008D16C4 /* MeetMeUpTests.m */; };
+		0E7CBDC9193525A4008D16C4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7CBDC8193525A4008D16C4 /* DetailViewController.m */; };
+		0E7CBDCC1935307B008D16C4 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7CBDCB1935307B008D16C4 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		0E7CBDB719350C57008D16C4 /* MeetMeUpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MeetMeUpTests-Info.plist"; sourceTree = "<group>"; };
 		0E7CBDB919350C57008D16C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E7CBDBB19350C57008D16C4 /* MeetMeUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetMeUpTests.m; sourceTree = "<group>"; };
+		0E7CBDC7193525A4008D16C4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		0E7CBDC8193525A4008D16C4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		0E7CBDCA1935307B008D16C4 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		0E7CBDCB1935307B008D16C4 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,10 @@
 				0E7CBD9F19350C57008D16C4 /* AppDelegate.h */,
 				0E7CBDA019350C57008D16C4 /* AppDelegate.m */,
 				0E7CBDA219350C57008D16C4 /* Main.storyboard */,
+				0E7CBDCA1935307B008D16C4 /* WebViewController.h */,
+				0E7CBDCB1935307B008D16C4 /* WebViewController.m */,
+				0E7CBDC7193525A4008D16C4 /* DetailViewController.h */,
+				0E7CBDC8193525A4008D16C4 /* DetailViewController.m */,
 				0E7CBDA519350C57008D16C4 /* ViewController.h */,
 				0E7CBDA619350C57008D16C4 /* ViewController.m */,
 				0E7CBDA819350C57008D16C4 /* Images.xcassets */,
@@ -250,8 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E7CBDA719350C57008D16C4 /* ViewController.m in Sources */,
+				0E7CBDCC1935307B008D16C4 /* WebViewController.m in Sources */,
 				0E7CBDA119350C57008D16C4 /* AppDelegate.m in Sources */,
 				0E7CBD9D19350C57008D16C4 /* main.m in Sources */,
+				0E7CBDC9193525A4008D16C4 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +388,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/davidwarner/Desktop/XCode,
+					Projects,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MeetMeUp/MeetMeUp-Prefix.pch";
 				INFOPLIST_FILE = "MeetMeUp/MeetMeUp-Info.plist";
@@ -389,6 +406,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/davidwarner/Desktop/XCode,
+					Projects,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MeetMeUp/MeetMeUp-Prefix.pch";
 				INFOPLIST_FILE = "MeetMeUp/MeetMeUp-Info.plist";

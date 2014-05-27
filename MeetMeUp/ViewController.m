@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -48,6 +49,15 @@
     cell.detailTextLabel.text = dictionary[@"venue"][@"address_1"];
 
     return cell;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *selectedIndexPath = self.tableView.indexPathForSelectedRow;
+    DetailViewController *destinationViewController = segue.destinationViewController;
+    NSDictionary *dictionary = [self.eventsArray objectAtIndex:selectedIndexPath.row];
+    destinationViewController.dictionaryFromSourceView = dictionary;
+
 }
 
 
